@@ -15,14 +15,13 @@ h3 {
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #3282B8;
+  /* color: #3282B8; */
 }
 h4 {
   font-size: 1.1rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   word-spacing: 0.4vw;
-  /*  */
 }
 h6 {
   font-size: 0.9rem;
@@ -116,4 +115,30 @@ header {
   width: 30%;
   height: 2px;
   background: #0F4C75;
+}
+
+.subscription {
+  background-color: #3282B8;
+}
+.subscription div .sub input {
+  outline: none;
+  border: 1px solid #0F4C75;
+}
+
+.blog .row .post a {
+  font-size: 0.9rem;
+  color: #3282B8;
+  font-weight: bold;
+  text-decoration: none;
+  border-style: none;
+}
+
+.blog .row .sidebar .side2 .row .sidetext h4 {
+  font-size: 1rem;
+}
+.blog .row .sidebar .side2 .row .sidetext a {
+  text-decoration: none;
+  border-style: none;
+  color: #3282B8;
+  font-size: 0.8rem;
 }
