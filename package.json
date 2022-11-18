@@ -1,0 +1,27 @@
+{
+  "name": "creed-thoughts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kson4/creed-thoughts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kson4/creed-thoughts/issues"
+  },
+  "homepage": "https://github.com/kson4/creed-thoughts#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.0",
+    "save": "^2.9.0"
+  }
+}
