@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const mongoDB = require("mongodb");
 const MongoClient = require("mongodb").MongoClient;
+const bodyParser = require("body-parser");
 require("dotenv").config();
 
 let db,
@@ -9,8 +11,8 @@ let db,
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
   (client) => {
@@ -28,12 +30,14 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/post", (req, res) => {
+app.get("/post/:id", (req, res) => {
+  const obj = new mongoDB.ObjectId(req.params.id);
+
   db.collection("posts")
-    .find()
-    .toArray()
-    .then((posts) => {
-      res.render("post.ejs", { posts: posts });
+    .findOne({ _id: obj })
+    .then((post) => {
+      console.log(post.img);
+      res.render("post.ejs", { post: post });
     });
 });
 

@@ -87,24 +87,26 @@
               <!-- Post header-->
               <header class="mb-4">
                   <!-- Post title-->
-                  <h1 class="fw-bolder mb-1"><%= posts[0].title %></h1>
+                  <h1 class="fw-bolder mb-1"><%= post.title %></h1>
                   <!-- Post meta content-->
                   <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div>
                   <!-- Post categories-->
                   <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                   <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a> -->
                   
-                  <% for(let i = 0; i < posts[0].category.length; i++) { %>
-                    <p class="badge bg-secondary"><%= posts[0].category[i] %></p>
+                  <% for(let i = 0; i < post.category.length; i++) { %>
+                    <p class="badge bg-secondary"><%= post.category[i] %></p>
                   <% } %>
                   
                   
               </header>
               <!-- Preview image figure-->
-              <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+              <figure class="mb-4">
+                <img class="img-fluid rounded" src=/img/<%=post.img%> />
+              </figure>
               <!-- Post content-->
               <section class="mb-5">
-                  <p class="fs-5 mb-4"><%= posts[0].content %></p>
+                  <p class="fs-5 mb-4"><%= post.content %></p>
                   <!-- <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
                   <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p> -->
               </section>

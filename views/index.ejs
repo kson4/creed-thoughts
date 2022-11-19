@@ -142,10 +142,10 @@
           <div class="row">
             <% for(let i = 0; i < posts.length; i++) {%>
             <div class="post1 col-lg-6 col-md-6 col-12 pb-4">
-              <img class="img-fluid pb-3" src="img/1.jpg" />
+              <img class="img-fluid pb-3" src=img/<%=posts[i].img%> />
               <h3><%= posts[i].title %></h3>
-              <p><%= posts[i].content %></p>
-              <a href="#">READ MORE</a>
+              <p><%= posts[i].content.slice(0, 100) + "..." %></p>
+              <a href=/post/<%= posts[i]._id %>>READ MORE</a>
             </div>
             <% } %>
 
