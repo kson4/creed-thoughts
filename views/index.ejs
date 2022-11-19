@@ -72,9 +72,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <button type="submit">SEARCH</button>
             </form>
           </div>
         </div>
@@ -142,6 +140,15 @@
       <div class="row">
         <div class="post col-lg-8 col-md-8 col-12">
           <div class="row">
+            <% for(let i = 0; i < posts.length; i++) {%>
+            <div class="post1 col-lg-6 col-md-6 col-12 pb-4">
+              <img class="img-fluid pb-3" src="img/1.jpg" />
+              <h3><%= posts[i].title %></h3>
+              <p><%= posts[i].content %></p>
+              <a href="#">READ MORE</a>
+            </div>
+            <% } %>
+
             <div class="post1 col-lg-6 col-md-6 col-12 pb-4">
               <img class="img-fluid pb-3" src="img/1.jpg" />
               <h3>POST TITLE</h3>
