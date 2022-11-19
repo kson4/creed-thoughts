@@ -26,7 +26,8 @@ app.get("/", (req, res) => {
     .find()
     .toArray()
     .then((posts) => {
-      res.render("index.ejs", { posts: posts });
+      const featured = posts.filter((post) => post.featured === true);
+      res.render("index.ejs", { posts: posts, featured: featured });
     });
 });
 
@@ -36,12 +37,11 @@ app.get("/post/:id", (req, res) => {
   db.collection("posts")
     .findOne({ _id: obj })
     .then((post) => {
-      console.log(post.img);
       res.render("post.ejs", { post: post });
     });
 });
 
 const PORT = 5000;
 app.listen(PORT, (req, res) => {
-  console.log(`server is listening on port: ${PORT}`);
+  console.log(`Server is listening on port: ${PORT}`);
 });

@@ -90,31 +90,16 @@
 
     <section class="featured container my-5">
       <div class="row">
-        <div class="one col-lg-4 col-md-6 col-12">
-          <img class="img-fluid" src="img/html.png" />
-          <div class="text w-75 h-50 text-light p-4">
-            <p>CATEGORY</p>
-            <h4>TITLE OF POST</h4>
-            <a href="#">LINK</a>
+        <% for(let i = 0; i < featured.length; i++) {%>
+          <div class="one col-lg-4 col-md-6 col-12">
+            <img class="img-fluid" src=/img/<%= featured[i].img %> />
+            <div class="text w-75 h-50 text-light p-4">
+              <p><%=featured[i].category[0] %></p>
+              <h4><%= featured[i].title %></h4>
+              <a href=/post/<%= posts[i]._id %>>LINK</a>
+            </div>
           </div>
-        </div>
-        <div class="one col-lg-4 col-md-6 col-12">
-          <img class="img-fluid" src="img/html.png" />
-          <div class="text w-75 h-50 text-light p-4">
-            <p>CATEGORY</p>
-            <h4>TITLE OF POST</h4>
-            <a href="#">LINK</a>
-          </div>
-        </div>
-        <div class="one col-lg-4 col-md-6 col-12">
-          <img class="img-fluid" src="img/html.png" />
-          <div class="text w-75 h-50 text-light p-4">
-            <p>CATEGORY</p>
-            <h4>TITLE OF POST</h4>
-            <a href="#">LINK</a>
-          </div>
-        </div>
-      </div>
+        <% } %>
     </section>
 
     <section class="subscription p-5 m-5">
